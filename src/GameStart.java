@@ -1,4 +1,6 @@
 import Hero.Wizard;
+import service.BattleService;
+import service.HeroService;
 import service.WizardService;
 
 import java.util.Scanner;
@@ -21,8 +23,8 @@ public class GameStart {
             case 1:
                 Wizard wizard = new Wizard(name);
                 System.out.println("🎉 Character created: " + wizard.getCharacterName());
-                WizardService wizardService = new WizardService();
-                wizardService.wizardPlayStyle(wizard);
+                HeroService hero = new HeroService();
+                hero.heroPlayStyle(wizard);
                 break;
 
             default:

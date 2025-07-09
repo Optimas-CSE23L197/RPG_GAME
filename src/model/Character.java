@@ -118,11 +118,27 @@ public abstract class Character {
         characterHP -= Math.max(0, characterHP - damage);
     }
 
-    public int getCharacterHP(int characterHP) {
+    public int getCharacterHP() {
         return characterHP;
     }
 
     public boolean isAlive() {
         return characterHP > 0;
+    }
+
+    public String getCharacterType() {
+        return characterType;
+    }
+
+    public int getCharacterMP() {
+        return characterMP;
+    }
+
+    public int getCharacterXP() {
+        return characterXP;
+    }
+
+    public List<Power> getPowers() {
+        return powers;
     }
 }

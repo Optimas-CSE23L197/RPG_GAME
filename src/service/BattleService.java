@@ -1,12 +1,13 @@
 package service;
 
 import Enemy.Goblin;
-import Hero.Wizard;
+import model.Character;
+import model.Enemy;
 
 public class BattleService {
 
     // battle b/w player and enemy
-    public void battle(Wizard wizard, Goblin goblin) {
+    public void battle(Character hero, Enemy enemy) {
 
         // always player start attack first
         System.out.println();
@@ -17,30 +18,29 @@ public class BattleService {
                 System.out.println("Fight");
             }
         }
-        while(wizard.isAlive() && goblin.isAlive()) {
+        while(hero.isAlive() && enemy.isAlive()) {
             System.out.println();
             System.out.println("__________");
             // player always start with base attack
-            wizard.attackStyle(goblin);
+            hero.attackStyle(enemy);
             // player attack done
 
             // check goblin dead or not
-            if (!goblin.isAlive()) {
+            if (!enemy.isAlive()) {
                 System.out.println("\uD83C\uDFC6 You Win......Congratulations!");
-                wizard.gainXP(120);
+                hero.gainXP(enemy.getEnemyXP());
+                enemy.resetEnemyStat();
                 break;
             }
 
             // enemy always start with base attack
-            goblin.attackStyle(wizard);
+            enemy.attackStyle(hero);
             // enemy attack done
 
             // check player stats
-            if (!wizard.isAlive()) {
+            if (!hero.isAlive()) {
                 System.out.println("\uD83D\uDC80 You Lose......Congratulations!");
             }
-
-
         }
     }
 }

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class WizardService {
     Scanner input = new Scanner(System.in);
-    public void wizardPlayStyle(Wizard wizard) {
+    public void wizardPlayStyle(Wizard wizard) throws InterruptedException {
         // show all details about wizard
         // show stats
         // start battle

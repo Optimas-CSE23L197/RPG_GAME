@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Goblin extends Enemy {
     public Goblin() {
-        super("Goblin", "gob001", 500, 200);
+        super("Goblin", "gob001", 500, 200, 50);
         this.powers = new ArrayList<>();
         powers.add(new Power("Scratch", 50, 100));
         powers.add(new Power("Bite", 100, 200));

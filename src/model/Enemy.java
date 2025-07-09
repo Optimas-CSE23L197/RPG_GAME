@@ -14,6 +14,9 @@ public abstract class Enemy {
     // enemy stats
     protected int enemyHP;
     protected int enemyMP;
+    protected int enemyXP;
+    protected int maxHP;
+    protected int maxMP;
     protected List<Power> powers;
 
     // enemy actions
@@ -47,10 +50,13 @@ public abstract class Enemy {
         }
     }
 
-    public Enemy(String enemyName, String enemyId, int enemyHP, int enemyMP) {
+    public Enemy(String enemyName, String enemyId, int enemyHP, int enemyMP, int enemyXP) {
         this.enemyName = enemyName;
         this.enemyHP = enemyHP;
         this.enemyMP = enemyMP;
+        this.enemyXP = enemyXP;
+        this.maxHP = enemyHP;
+        this.maxMP = enemyMP;
         this.powers = new ArrayList<>();
     }
 
@@ -60,6 +66,15 @@ public abstract class Enemy {
 
     public boolean isAlive() {
         return enemyHP > 0;
+    }
+
+    public int getEnemyXP() {
+        return enemyXP;
+    }
+
+    public void resetEnemyStat() {
+        this.enemyHP = this.maxHP;
+        this.enemyMP = this.maxMP;
     }
 
 }
