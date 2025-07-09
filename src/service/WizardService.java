@@ -1,8 +1,8 @@
 package service;
 
-import model.Goblin;
+import Enemy.Goblin;
 import model.Power;
-import model.Wizard;
+import Hero.Wizard;
 
 import java.util.Scanner;
 

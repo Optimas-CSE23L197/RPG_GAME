@@ -1,9 +1,7 @@
 package service;
 
-import model.Character;
-import model.Enemy;
-import model.Goblin;
-import model.Wizard;
+import Enemy.Goblin;
+import Hero.Wizard;
 
 public class BattleService {
 
@@ -28,7 +26,7 @@ public class BattleService {
 
             // check goblin dead or not
             if (!goblin.isAlive()) {
-                System.out.println("You Win......Congratulations!");
+                System.out.println("\uD83C\uDFC6 You Win......Congratulations!");
                 wizard.gainXP(120);
                 break;
             }
@@ -39,7 +37,7 @@ public class BattleService {
 
             // check player stats
             if (!wizard.isAlive()) {
-                System.out.println("You Lose......Congratulations!");
+                System.out.println("\uD83D\uDC80 You Lose......Congratulations!");
             }
 
 

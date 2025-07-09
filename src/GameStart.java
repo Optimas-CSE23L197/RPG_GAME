@@ -1,5 +1,4 @@
-import model.Character;
-import model.Wizard;
+import Hero.Wizard;
 import service.WizardService;
 
 import java.util.Scanner;
